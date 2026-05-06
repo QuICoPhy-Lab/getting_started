@@ -7,10 +7,12 @@ scheduler. You log in to a *login node*, prepare your code and data there, then 
 scheduler (SLURM, in our case) to run your work on *compute nodes* with the CPUs, GPUs,
 memory, and time you requested.
 
-Notable resources include the
-[Digital Research Alliance of Canada Wiki](https://docs.alliancecan.ca/wiki/Getting_started),
-[Digital Research Alliance of Canada User Portal](https://portal.alliancecan.ca/login) and
-[Institut Quantique Computing Cluster](https://ccs-udes.github.io/hpc-iq/en/).
+Notable resources include:
+
+- [Digital Research Alliance of Canada Wiki](https://docs.alliancecan.ca/wiki/Getting_started)
+- [Digital Research Alliance of Canada Account](https://ccdb.alliancecan.ca/security/login)
+- [Digital Research Alliance of Canada User Portal](https://portal.alliancecan.ca/login)
+- [Institut Quantique Computing Cluster](https://ccs-udes.github.io/hpc-iq/en/)
 
 ## 0. Available clusters
 
