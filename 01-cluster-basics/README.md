@@ -18,12 +18,12 @@ Two categories of clusters are available. IQ clusters are smaller and typically 
 access for everyday work; Alliance clusters are larger national systems better suited to
 heavier or longer jobs.
 
-*Institut Quantique*:
+**Institut Quantique**:
 
 - `iq-main` (shared with all IQ research groups)
 - `iq-aphex` (shared with QuICoPhy Lab group)
 
-*Digital Research Alliance of Canada*:
+**Digital Research Alliance of Canada**:
 
 - `fir`
 - `rorqual`
