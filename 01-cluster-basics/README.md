@@ -31,6 +31,7 @@ heavier or longer jobs.
 - `rorqual`
 - `narval`
 - `niagara`
+- `nibi`
 
 ## 1. Connect with SSH
 
@@ -42,6 +43,10 @@ For Alliance clusters, use:
 ```bash
 ssh <username>@<cluster>.alliancecan.ca
 ```
+
+Alliance logins use multi-factor authentication (MFA): after entering your password, you
+must confirm a second factor (for example via your authenticator app). See the
+[Alliance MFA guide](https://docs.alliancecan.ca/wiki/Multifactor_authentication).
 
 For IQ infrastructure, use:
 
@@ -79,6 +84,11 @@ Example with `scp`:
 ```bash
 scp -r <local_folder> <username>@<cluster>.alliancecan.ca:~/projects/def-ko1/<username>/
 ```
+
+You can also manage remote files from your IDE over SFTP/SSH instead of using `scp` each
+time. See [PyCharm SFTP deployment](https://www.jetbrains.com/help/pycharm/big-data-tools-sftp.html)
+and VS Code options: [Remote SSH](https://code.visualstudio.com/docs/remote/ssh) or the
+[SFTP extension](https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp).
 
 ## 4. Submit a first SLURM job
 
