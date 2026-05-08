@@ -10,22 +10,20 @@
 #SBATCH --mail-user=<your email>       # Receive a notification when your jobs finish running
 #SBATCH --mail-type=ALL
 
-
-
 # Define virtual environment name and the files' names
-env_name="venv"                           # Virtual environment name of your choice
-requirements="requirements.txt"           # File name containing the packages of the virtual environment
-python_script="job.py"                    # Your job's file name
+env_name="venv"                 # Virtual environment name of your choice
+requirements="requirements.txt" # File name containing the packages of the virtual environment
+python_script="job.py"          # Your job's file name
 
 # Function to box any message in `#` symbol (message: str)
 display_boxed_message() {
-    local message="$1"
-    local message_length=${#message}
-    local box_width=$((message_length + 2))
-    local horizontal_line=$(printf "%${box_width}s" | tr ' ' '#')
-    echo -e "\n##$horizontal_line##"
-    printf "#  %s  #\n" "$message"
-    echo -e "##$horizontal_line##\n"
+  local message="$1"
+  local message_length=${#message}
+  local box_width=$((message_length + 2))
+  local horizontal_line=$(printf "%${box_width}s" | tr ' ' '#')
+  echo -e "\n##$horizontal_line##"
+  printf "#  %s  #\n" "$message"
+  echo -e "##$horizontal_line##\n"
 }
 
 # Load important modules
@@ -35,8 +33,8 @@ module load scipy-stack
 # Build the fresh new environment in the temporary directory in which your jobs run
 python3.9 -m venv $SLURM_TMPDIR/"$env_name"
 source $SLURM_TMPDIR/"$env_name"/bin/activate
-pip install --upgrade pip --no-index > /dev/null
-pip install -r "$requirements" --no-index > /dev/null
+pip install --upgrade pip --no-index >/dev/null
+pip install -r "$requirements" --no-index >/dev/null
 
 # Show useful information
 display_boxed_message "Built environment contains the following packages"

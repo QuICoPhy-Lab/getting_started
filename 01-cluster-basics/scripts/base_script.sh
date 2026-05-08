@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -p c-iq                        # To use the IQ cluster, or -p c-aphex to use our machine
+#SBATCH -p c-iq-main                   # To use the IQ cluster, or -p iq-aphex to use our machine
 #SBATCH --job-name=output              # The name of the file in which your outputs will be printed
 #SBATCH --time=01:00:00                # Time given to run your job (1 hour in this case)
 #SBATCH --account=def-ko1              # Keep this as it is
@@ -8,15 +8,13 @@
 #SBATCH --mail-user=<your email>       # Receive a notification when your jobs finish running
 #SBATCH --mail-type=ALL
 
-
-
 # Define virtual environment name and the files' names
-env_name="venv"            # Virtual environment name
-python_script="job.py"     # Your job's file name
+env_name="venv"        # Virtual environment name
+python_script="job.py" # Your job's file name
 
 # Load important modules
-module load python/3.9     # Load a certain Python version 
-module load scipy-stack    # Load basic Pyton packages like numpy and scipy
+module load python/3.12 # Load a certain Python version
+module load scipy-stack # Load basic Pyton packages like numpy and scipy
 
 # Activate your virtual environment
 source "$env_name"/bin/activate

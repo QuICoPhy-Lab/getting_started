@@ -1,0 +1,35 @@
+Host *
+    ControlMaster auto
+    ControlPath ~/.ssh/cm/.ssh_%h_%p_%r
+    ControlPersist 3600
+
+Host iq
+    HostName hpc.iq.ccs.usherbrooke.ca
+    User Username
+    IdentityFile ~/.ssh/iq/id_ed25519
+    ServerAliveInterval 240
+
+Host fir
+    HostName fir.alliancecan.ca
+    User Username
+    IdentityFile ~/.ssh/alliance-can/id_ed25519
+    ServerAliveInterval 240
+
+Host nibi
+    HostName nibi.alliancecan.ca
+    User Username
+    IdentityFile ~/.ssh/alliance-can/id_ed25519
+    ServerAliveInterval 240
+
+Host narval
+    HostName narval.alliancecan.ca
+    User Username
+    IdentityFile ~/.ssh/alliance-can/id_ed25519
+    ServerAliveInterval 240
+
+Host rorqual
+    HostName rorqual.alliancecan.ca
+    User Username
+    IdentityFile ~/.ssh/alliance-can/id_ed25519
+    ServerAliveInterval 240
+
